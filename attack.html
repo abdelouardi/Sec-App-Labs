@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>SOP Test</h2>
+<button onclick="attack()">Attack</button>
+
+<script>
+function attack() {
+    fetch("http://localhost:8001/secret.html")
+        .then(r => r.text())
+        .then(t => alert("Accessed!"))
+        .catch(e => alert("Blocked by SOP"));
+}
+</script>
+
+</body>
+</html>
